@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="css/qgirl.css">
+</head>
+<body>
+		<!-- Q娘 start -->
+<div class="qGirl-wrap">
+    <canvas id="qgirlCanvas" class="qGirl-canvas"></canvas>
+    <div class="msg-pop" id="msgPop" style="display: none;">
+        <script type="text/html" id="msgPopMod">
+        <span class="border"></span>
+        <a {{if link}}href="{{link}}"{{/if}} class="msg-pop-style-{{styleType}}" target="_blank">
+            {{if id}}
+            {{if pic}}
+            <img src="http://ugc.qpic.cn/manhua_cover/0/{{pic}}/0">
+            {{/if}}
+            {{if title}}
+            <h3>{{title}}</h3>
+            {{/if}}
+            {{if content}}
+            <p>{{content}}</p>
+            {{/if}}
+            {{else}}
+            {{if pic}}
+            <img src="{{pic}}">
+            {{/if}}
+            {{if title}}
+            <h3>{{title}}</h3>
+            {{/if}}
+            {{if content}}
+            <p>{{content}}</p>
+            {{/if}}
+            {{/if}}
+        </a>
+        <a class="close-btn" id="msgPopClose"></a>
+        <i class="decoration-1"></i>
+        <i class="decoration-2"></i>
+        <i class="decoration-3"></i>
+        </script>
+    </div>
+    <div id="qgirlContain" class="qGirl-contain"></div>
+    <div id="bombContain" class="bomb-contain"></div>
+    <span class="msg-tip" style="display: none;" id="msgTip"></span>
+    <a class="hide-btn" id="hideBtn"></a>
+</div>
+<!-- Q娘 end -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/qgirl.js"></script>
+</body>
+</html>
